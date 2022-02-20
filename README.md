@@ -28,22 +28,20 @@ List of example commands ==>
 
 Add a new task using the --add command. The task description will have to be enclosed in quotes if there are multiple words. A unique indentifier is returned if the operation is succesful. If the operation is not succesful, the user is informed and the program is ended. The default priority value is 1 and the due date is optional. 
 
-$ python todo.py --add "Walk Dog" --due 4/17/2018 --priority 1
+$ python todo.py --add "Walk Dog" --due 4/17/2018 --priority 1 \n
 Created task 1
 
-$ python todo.py --add 2 --due 4/17/2018 --priority 1
+$ python todo.py --add 2 --due 4/17/2018 --priority 1 \n
 There was an error in creating your task. Run "todo -h" for usage instructions.
 
-$ python todo.py --add "Study for finals" --due 3/20/2018 --priority 3
+$ python todo.py --add "Study for finals" --due 3/20/2018 --priority 3 \n
 Created task 2
 
-$ python todo.py --add "Buy milk and eggs" —due friday --priority 2
+$ python todo.py --add "Buy milk and eggs" —due friday --priority 2 \n
 Created task 3
 
-$ python todo.py --add "Cook eggs"
+$ python todo.py --add "Cook eggs" \n
 Created task 4
-
-----
 
 ----
 
@@ -52,13 +50,7 @@ The --list command is used to display a list of the not completed tasks sorted b
 $ python todo.py list
 
 ID   Age  Due Date   Priority   Task
---   ---  --------   --------   ----
-1    3d   4/17/2018   1         Walk dog
-2    10d  3/20/2018   3         Study for finals
-3    1d   -           1         Buy eggs
-4    30d  -           2         Make eggs
-
-----
+(your tasks here)
 
 ----
 
@@ -67,53 +59,41 @@ Search for tasks that match a search term using the --query command. Only tasks 
 $ python todo.py --query eggs
 
 ID   Age  Due Date   Priority   Task
---   ---  --------   --------   ----
-3    1d   -           2         Buy eggs
-4    30d  -           1         Make eggs
+(your tasks here)
 
 Multiple terms are able to be searched. This is done through 'nargs' in the argparse package. 
 
 $ python todo.py --query eggs dog
 
 ID   Age  Due Date   Priority   Task
---   ---  --------   --------   ----
-1    3d   4/17/2018   1         Walk dog
-3    1d   -           2         Buy eggs
-4    30d  -           1         Make eggs
-
-----
+(your tasks here)
 
 ----
 
 Complete a task by passing the done argument and the unique identifier. The following example complete tasks 1 and 2. Note that you are not deleting a task, you are just marking it as complete. The --list command will no longer print these tasks to the terminal. 
 
-$ python todo.py --done 1
+$ python todo.py --done 1 \n
 Completed task 1
 
-$ python todo.py --done 2
+$ python todo.py --done 2 \n
 Completed task 2
 
 $ python todo.py --list
 
 ID   Age  Due Date   Priority   Task
---   ---  --------   --------   ----
-3    1d   -           2         Buy eggs
-4    30d  -           1         Make eggs
+(your tasks here)
 
 ----
 
 Delete a task by passing the --delete command and the unique identifier. 
 
-$ python todo.py --delete 3
+$ python todo.py --delete 3 \n
 Deleted task 3
 
 $ python todo.py list
 
 ID   Age  Due Date   Priority   Task
---   ---  --------   --------   ----
-4    30d  -           1         Make eggs
-
-----
+(your tasks here)
 
 ----
 
@@ -122,11 +102,7 @@ List all tasks, including complete and incomplete tasks using the --report comma
 $ python todo.py report
 
 ID   Age  Due Date   Priority   Task                Created                       Completed
---   ---  --------   --------   ----                ---------------------------   -------------------------
-1    3d   4/17/2018   1         Walk dog            Mon Mar  5 12:10:08 CST 2018  Mon Mar  5 12:10:08 CST 2018
-2    10d  3/20/2018   3         Study for finals    Tue Mar  6 12:10:08 CST 2018  Tue Mar  6 12:10:08 CST 2018
-3    1d   -           2         Buy eggs            Tue Mar  6 12:10:08 CST 2018  -
-4    30d  -           1         Make eggs           Tue Mar  6 12:10:08 CST 2018  -
+(your tasks here)
 
 ----
 
